@@ -41,7 +41,6 @@
     "test": "scripts/test.sh",
     "compile": "truffle compile",
     "console": "truffle console",
-    "migrate": "truffle migrate --reset",
-    "deploy": "scripts/gh-pages.sh"
+    "migrate": "truffle migrate --reset"
   }
 }
