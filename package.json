@@ -1,13 +1,13 @@
 {
-  "name": "cryptodoggies",
+  "name": "joyart",
   "version": "1.0.0",
-  "description": "Purchase your favourite Digital Crypto Doggies on the blockchain",
+  "description": "Purchase original art from John Orion Young on the blockchain",
   "keywords": [
     "solidity",
     "ethereum",
     "smart",
     "contracts",
-    "cryptodoggies"
+    "JoyArt"
   ],
   "repository": {
     "type": "git",
