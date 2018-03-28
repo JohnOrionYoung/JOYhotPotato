@@ -1,6 +1,6 @@
 {
   "name": "joyart",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Purchase original art from John Orion Young on the blockchain",
   "keywords": [
     "solidity",
@@ -29,6 +29,7 @@
     "truffle-hdwallet-provider": "0.0.3"
   },
   "dependencies": {
+    "express": "4.16.3",
     "jsonfile": "^4.0.0",
     "web3": "^0.20.5",
     "zeppelin-solidity": "^1.7.0"
@@ -37,10 +38,13 @@
     "test": "test"
   },
   "scripts": {
+    "start": "node server.js",
     "dev": "lite-server",
     "test": "scripts/test.sh",
     "compile": "truffle compile",
     "console": "truffle console",
     "migrate": "truffle migrate --reset"
-  }
+  },
+  "author": "John Orion Young",
+  "license": "ISC"
 }
