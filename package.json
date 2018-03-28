@@ -11,12 +11,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/t04glovern/cryptodoggies.git"
+    "url": "git+https://github.com/johnorionyoung/johnorionyoung.github.io"
   },
   "bugs": {
-    "url": "https://github.com/t04glovern/cryptodoggies/issues"
+    "url": "https://github.com/JohnOrionYoung/johnorionyoung.github.io/issues"
   },
-  "homepage": "https://github.com/t04glovern/cryptodoggies",
+  "homepage": "https://github.com/JohnOrionYoung/johnorionyoung.github.io",
   "devDependencies": {
     "bignumber.js": "^6.0.0",
     "dotenv": "^5.0.0",
