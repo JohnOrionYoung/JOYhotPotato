@@ -26,11 +26,11 @@ var App = {
   init() {
     return App.initWeb3();
     if(!web3.isConnected()) {
-  
+
       // show some dialog to ask the user to start a node
   
    } else {
-    
+      
       // start web3 filters, calls, etc
   
    }
@@ -71,7 +71,6 @@ var App = {
       } else {
         // Remove existing cards
         $('#card-row').children().remove();
-        
       }
     });
 
