@@ -161,4 +161,9 @@ hr {
     content: 'Selling';
 }
   
+.thead {
+    background-color: #111;
+    color: #fff;
+    border-radius: 50px;
+}
 

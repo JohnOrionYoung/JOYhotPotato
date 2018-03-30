@@ -8,8 +8,9 @@
 
     <title>John Orion Young</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css">
 
     <!-- Custom styles for this template -->
 	<link href="css/main.css" rel="stylesheet">
@@ -65,100 +66,34 @@
     </nav>
 
     <div class="col-xs-12" style="height:100px;"></div>
-
+    <div class="container-fluid">
     <div class="row">
             <div class="col-md-4"></div>
-            <div class="col-md-4"><img src="/img/Trophy.png" class="img-fluid" 
+            <div class="col-md-4"><img 
+                src="/img/Trophy.png" 
+                class="img-fluid" 
                 alt="Trophy"></div>
             <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <table data-toggle="table"
+            data-url="https://etherscan.io/address/0x6F99f7aD56DA19Ea3395434EaFFfDc3A2d5a5Acc"
+            data-query-params="queryParams"
+            data-height="100%">
+         <thead class="thead">
+             <tr>
+                 <th data-field="stargazers_count">Rank</th>
+                 <th data-field="art-owner">Collector</th>
+                 <th data-field="forks_count">Quantity</th>
+                 <th data-field="forks_count">Worth</th>
+             </tr>
+         </thead>
+         </table>
         </div>
-
-                <table class="table table-responsive-sm">
-                    <thead class="thead-dark">
-                      <tr>
-                        <th scope="col">Rank</th>
-                        <th scope="col">Collector</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Worth</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Big Face</td>
-                        <td>7</td>
-                        <td>27 ETH</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>0x4d430e327c8967cd23a8c17a256ba4f33e2a2ced</td>
-                        <td>4</td>
-                        <td>16 ETH</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>3</td>
-                        <td>12 ETH</td>
-                      </tr>
-                      <tr>
-                            <th scope="row">4</th>
-                            <td>Larry</td>
-                            <td>3</td>
-                            <td>12 ETH</td>
-                          </tr>
-                          <tr>
-                                <th scope="row">5</th>
-                                <td>Larry</td>
-                                <td>3</td>
-                                <td>12 ETH</td>
-                              </tr>
-                              <tr>
-                                    <th scope="row">6</th>
-                                    <td>0x4d430e327c8967cd23a8c17a256ba4f33e2a2ced/td>
-                                    <td>3</td>
-                                    <td>12 ETH</td>
-                                  </tr>
-                                  <th scope="row">1</th>
-                                  <td>Big Face</td>
-                                  <td>7</td>
-                                  <td>27 ETH</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">2</th>
-                                  <td>0x4d430e327c8967cd23a8c17a256ba4f33e2a2ced</td>
-                                  <td>4</td>
-                                  <td>16 ETH</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">3</th>
-                                  <td>Larry</td>
-                                  <td>3</td>
-                                  <td>12 ETH</td>
-                                </tr>
-                                <tr>
-                                        <th scope="row">1</th>
-                                        <td>Big Face</td>
-                                        <td>7</td>
-                                        <td>27 ETH</td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">2</th>
-                                        <td>0x4d430e327c8967cd23a8c17a256ba4f33e2a2ced</td>
-                                        <td>4</td>
-                                        <td>16 ETH</td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">3</th>
-                                        <td>Larry</td>
-                                        <td>3</td>
-                                        <td>12 ETH</td>
-                                      </tr>
-                                      <tr>
-                    </tbody>
-            </table>
-
-           
+        <div class="col-md-1"></div>
+    </div>    
 
         <div class="col-xs-12" style="height:180px;"></div>
      
@@ -395,7 +330,7 @@
         </div>
 
     </div>
-
+</div>
 
 
     <!-- ========= Bootsrap 4 - JavaScript ========= -->
@@ -405,6 +340,7 @@
 	crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
     crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
 
 	<!-- ========= Local JavaScript ========= -->
 	<script type="text/javascript" src="js/lib/bignumber.min.js"></script>
