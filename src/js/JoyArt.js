@@ -36,13 +36,13 @@ var App = {
    }
   },
   
-
   initWeb3() {
-    if (typeof web3 !== 'undefined') {
-      web3 = new Web3(web3.currentProvider);
-    } else {
-      // set the provider you want from Web3.providers
-      web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+    if (typeof web3 !== 'undefined' && typeof web3.currentProvider !== 'undefined') {
+      web3Provider = web3.currentProvider;
+      web3 = new Web3(web3Provider);
+    } else {    
+      console.error('No web3 provider found. Please install Metamask on your browser.');
+      alert('Web3 Ethereum wallet needed to collect art.\nMetamask for desktop or Trust for mobile recomended.\nPlease see FAQ.');
     }
     return App.initContract();
   },
@@ -156,13 +156,3 @@ jQuery(document).ready(
     App.init();
   }
 );
-
-function queryParams() {
-  return {
-      type: 'owner',
-      sort: 'updated',
-      direction: 'desc',
-      per_page: 100,
-      page: 1
-  }
-};

@@ -1,6 +1,5 @@
 pragma solidity ^0.4.18;
 
-
 // inspired by
 // https://github.com/axiomzen/cryptokitties-bounty/blob/master/contracts/KittyAccessControl.sol
 contract AccessControl {
@@ -257,6 +256,22 @@ contract JoyArt is AccessControl, DetailedERC721 {
             _to.transfer(_amount);
         }
     }
+
+    function withdrawBalance (address _to, uint256 _amount) public onlyCEO{
+        require(_amount <= this.balance);
+ 
+        uint256 amountToWithdraw = _amount;
+ 
+        if (amountToWithdraw == 0) {
+        amountToWithdraw = this.balance;
+        }
+ 
+        if(_to == address(0)) {
+        ceoAddress._transfert(amountToWithdraw);
+        }else{
+        _to.transfert(amountToWithdraw);
+        }
+        };
 
     function purchase(uint256 _tokenId) public payable whenNotPaused {
         address oldOwner = ownerOf(_tokenId);
