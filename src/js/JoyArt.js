@@ -42,7 +42,7 @@ var App = {
       web3 = new Web3(web3Provider);
     } else {    
       console.error('No web3 provider found. Please install Metamask on your browser.');
-      alert('Web3 Ethereum wallet needed to collect art.\nMetamask for desktop or Trust for mobile recomended.\nPlease see FAQ.');
+      alert('💎 Web3 Ethereum wallet needed to collect art.\n\n🦊 Metamask for desktop or Trust for mobile recomended.\n\n😃 Please see FAQ.');
     }
     return App.initContract();
   },
