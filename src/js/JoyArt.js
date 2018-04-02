@@ -35,7 +35,7 @@ var App = {
   
    }
   },
-  
+
   initWeb3() {
     if (typeof web3 !== 'undefined' && typeof web3.currentProvider !== 'undefined') {
       web3Provider = web3.currentProvider;
