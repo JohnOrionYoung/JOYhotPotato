@@ -37,6 +37,7 @@
 </head>
 
 <body>
+<div class="container-fluid">
     <nav class="navbar fixed-top navbar-expand-md navbar-light" style="background-color: #fff;">
         <a class="navbar-brand" href="/about.html">
             <img src="/img/JOY_new_logo.png" width="50" height="50" class="d-inline-block align-center" alt="">
@@ -63,7 +64,6 @@
             </span>
         </div>
     </nav>
-
     <div class="col-xs-12" style="height:60px;"></div>
     <div class="card-container">
         <div class="row mt centered">
@@ -94,9 +94,7 @@
                         <small>Collector:</small>
                         <small><a class="text-muted art-owner" target="_blank"></a></small>
                     </div>
-                        <small>Next Price: </small>
-                        <small><a class="text-muted art-next-price"></a></small>
-                        <small>ETH</small>
+                  
                     <hr>
                     <!-- Art Purchase -->
                     <form class="art-purchase">
@@ -104,6 +102,12 @@
                             <button class="btn btn-primary btn-buy" type="submit" data-id="0" id="artBuyButton"><span>Buy </span>
                             <text class="art-price" type="number" id="artPrice"></text></button>
                         </div>
+
+                        <div class="art-text">
+                                <small>Next Price: </small>
+                                <small><a class="art-next-price"></a></small>
+                                <small>ETH</small>
+                            </div>
                     </form>
                     <hr>
                 </div>
@@ -349,7 +353,6 @@
             </div>
     </div>
 </div>
-
 
     <!-- ========= Bootsrap 4 - JavaScript ========= -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

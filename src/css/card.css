@@ -15,9 +15,6 @@
 
 .card {
     background-color:rgba(0, 0, 0, 0);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     margin-top: 50px;
     margin-bottom: 50px;
     text-align: center;
@@ -37,4 +34,14 @@
 .card-container {
     margin-left: 0px;
     margin-right: 0px;
+}
+
+.art-owner {
+    display: inline-block;
+    width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1em;
+    vertical-align: text-bottom;
 }
