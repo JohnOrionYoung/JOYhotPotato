@@ -103,26 +103,26 @@ hr {
 
 .btn {
     color: #ffffff;
-    background-color: #0057FF;
+    background-color: #1970E5;
     border-color: #2F80ED;
     font-size: 16px;
     font-weight: 800;
     border-radius: 20px;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), 0 0px 1px rgba(0, 0, 0, 0.17);
     transition: all 1s cubic-bezier(.25, .8, .25, 1);
-    width: 150px;
-    margin-bottom: 6px;
+    width: 160px;
+    margin-bottom: 8px;
 }
 
 .btn:hover {
     color: #ffffff;
 	background-color: #2F80ED;
-    border-color: #0057FF;
+    border-color: #1970E5;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16), 0 1px 4px rgba(0, 0, 0, 0.19);
 }
 
 .btn-link {
-    color: #2F80ED;
+    color: #1970E5;
     background: none;
     font-size: 16px;
     font-weight: 500;
@@ -156,9 +156,9 @@ hr {
 
 .btn-buy:disabled span {
     display: none;
-  }
+}
   
-  .btn-buy:disabled:before {
+.btn-buy:disabled:before {
     content: 'Selling';
 }
   
