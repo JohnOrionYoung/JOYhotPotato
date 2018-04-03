@@ -38,7 +38,7 @@
 
 .art-owner {
     display: inline-block;
-    width: 160px;
+    width: 100px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
