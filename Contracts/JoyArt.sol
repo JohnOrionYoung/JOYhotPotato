@@ -117,33 +117,19 @@ contract JoyArt is AccessControl, DetailedERC721 {
 
     function withdrawBalance(address _to, uint256 _amount) public onlyCEO {
         require(_amount <= this.balance);
-
-        if (_amount == 0) {
-            _amount = this.balance;
-        }
-
-        if (_to == address(0)) {
-            ceoAddress.transfer(_amount);
-        } else {
-            _to.transfer(_amount);
-        }
-    }
-
-    function withdrawBalance (address _to, uint256 _amount) public onlyCEO{
-        require(_amount <= this.balance);
  
         uint256 amountToWithdraw = _amount;
  
         if (amountToWithdraw == 0) {
-        amountToWithdraw = this.balance;
+            amountToWithdraw = this.balance;
         }
  
         if(_to == address(0)) {
-        ceoAddress._transfert(amountToWithdraw);
-        }else{
-        _to.transfert(amountToWithdraw);
+            ceoAddress.transfer(amountToWithdraw);
+        } else {
+            _to.transfer(amountToWithdraw);
         }
-        };
+    }
 
     function purchase(uint256 _tokenId) public payable whenNotPaused {
         address oldOwner = ownerOf(_tokenId);

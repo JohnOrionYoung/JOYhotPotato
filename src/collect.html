@@ -16,6 +16,9 @@
 	<link href="css/main.css" rel="stylesheet">
     <link href="css/card.css" rel="stylesheet">
 
+    <!-- Etherscan -->
+    <script src="https://cdn.rawgit.com/sebs/etherscan-api/dist/bundle.js"></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84671544-1"></script>
     <script>
@@ -25,9 +28,6 @@
 
         gtag('config', 'UA-84671544-1');
     </script>
-
-    <!-- Alert Style -->
-    <script type="text/javascript" src="./modernAlert.min.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -77,21 +77,21 @@
         <div class="col-md-1"></div>
         <div class="col-md-10">
             <table data-toggle="table"
-            data-url="https://etherscan.io/address/0x6F99f7aD56DA19Ea3395434EaFFfDc3A2d5a5Acc"
+            data-url="https://api.etherscan.io/api?module=stats&action=tokensupply&contractaddress=0x6f99f7ad56da19ea3395434eafffdc3a2d5a5acc&apikey=0x6f99f7ad56da19ea3395434eafffdc3a2d5a5acc"
             data-query-params="queryParams"
             data-height="100%">
          <thead class="thead">
              <tr>
-                 <th data-field="stargazers_count">Rank</th>
-                 <th data-field="art-owner">Collector</th>
-                 <th data-field="forks_count">Quantity</th>
-                 <th data-field="forks_count">Worth</th>
+                 <th data-field="Rank">Rank</th>
+                 <th data-field="Address">Collector</th>
+                 <th data-field="Quantity">Quantity</th>
+                 <th data-field="Percentage">Worth</th>
              </tr>
          </thead>
          </table>
         </div>
         <div class="col-md-1"></div>
-    </div>    
+    </div>
 
         <div class="col-xs-12" style="height:180px;"></div>
      
