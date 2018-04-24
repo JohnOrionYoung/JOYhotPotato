@@ -21,7 +21,7 @@ function loadArt(artId, artName, artPrice, artNextPrice, ownerAddress, locallyOw
 
 var App = {
   contracts: {},
-  JoyArtAddress: '0x087D7A9d3F5815059e1A6161ff0Af11B07FCAD1a',
+  JoyArtAddress: '0x647DE7A4F2d31AA284414092A0095B991634B412',
 
   init() {
     return App.initWeb3();
