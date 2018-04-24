@@ -33,7 +33,7 @@ contract JoyArt is AccessControl, DetailedERC721 {
 
     Art[] private artworks;
 
-    uint256 private startingPrice = 0.01 ether;
+    uint256 private startingPrice = 0.001 ether;
     bool private erc721Enabled = false;
 
     modifier onlyERC721() {
