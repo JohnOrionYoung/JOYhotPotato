@@ -29,6 +29,7 @@
     "truffle-hdwallet-provider": "0.0.3"
   },
   "dependencies": {
+    "etherscan-api": "^8.0.4",
     "express": "4.16.3",
     "jsonfile": "^4.0.0",
     "web3": "^0.20.5",

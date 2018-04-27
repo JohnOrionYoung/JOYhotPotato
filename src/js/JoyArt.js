@@ -62,6 +62,14 @@ var App = {
   return App.bindEvents();
   },
 
+  loadetherscan(){
+   var api = require('etherscan-api').init('APSFBY6Q4ECXHIJ1ZHJY7HPF2AA1YHTAWW');
+   var balance = api.account.balance('0x96313f2C374F901E3831ea6DE67b1165c4f39A54');
+   balance.then(function(balanceData){
+   console.log(balanceData);
+   });
+  },
+
   loadartworks() {
     web3.eth.getAccounts(function(err, accounts) {
       if (err != null) {
