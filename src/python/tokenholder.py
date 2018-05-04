@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 from __future__ import print_function
 import os
 import requests
@@ -7,7 +5,7 @@ from bs4 import BeautifulSoup
 import csv
 import time
 
-RESULTS = "results.csv"
+RESULTS = "johnorionyoung base/src/python/collectors.csv" 
 URL = "https://etherscan.io/token/generic-tokenholders2?a=0x96313f2C374F901E3831ea6DE67b1165c4f39A54&s=0&p="
 
 def getData(sess, page):
@@ -20,7 +18,6 @@ def getPage(sess, page):
     return [[X.text.strip() for X in row.find_all('td')] for row in table.find_all('tr')]
 
 def main():
-    resp = requests.get(URL)
     sess = requests.Session()
 
     with open(RESULTS, 'wb') as f:

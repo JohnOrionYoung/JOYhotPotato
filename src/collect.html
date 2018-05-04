@@ -16,13 +16,10 @@
 	<link href="css/main.css" rel="stylesheet">
     <link href="css/card.css" rel="stylesheet">
 
-    <!-- Datatables.net -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jq-3.2.1/dt-1.10.16/datatables.min.css"/>
-    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jq-3.2.1/dt-1.10.16/datatables.min.js"></script>
-
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84671544-1"></script>
+
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -72,7 +69,7 @@
         <div class="col-md-1"></div>
         <div class="col-md-10">
             <table data-toggle="table"
-            data-url="results.csv"
+            data-url="/johnorionyoung base/src/python/collectors.csv"
             data-query-params="queryParams"
             data-height="100%">
          <thead class="thead">
@@ -88,6 +85,19 @@
          </table>
         </div>
         <div class="col-md-1"></div>
+    </div>
+
+    <div>
+        
+            <div id="demo"> </div>
+    <script>
+        $(function() {
+            2
+            $('#demo').CSVToTable('/johnorionyoung base/src/python/collectors.csv');
+            3
+            });
+    </script>
+ 
     </div>
 
         <div class="col-xs-12" style="height:180px;"></div>
@@ -341,7 +351,10 @@
 	<script type="text/javascript" src="js/lib/bignumber.min.js"></script>
 	<script type="text/javascript" src="js/lib/web3.min.js"></script>
 	<script type="text/javascript" src="js/lib/truffle-contract.min.js"></script>
-	<script type="text/javascript" src="js/JoyArt.js"></script>
+    <script type="text/javascript" src="js/JoyArt.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery.csvToTable.js"></script>
+
 
 </body>
 
