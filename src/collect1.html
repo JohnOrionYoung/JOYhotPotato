@@ -423,7 +423,7 @@ function generateHtmlTable(data) {
  $.each(row, function( index, colData ) {
  html += '<td>';
  if(index ==1){
- html += '<a href=https://etherscan.io/token/0x96313f2C374F901E3831ea6DE67b1165c4f39A54?a='+ colData + 'a target="_blank">' + colData +'</a>';
+ html += '<a href="https://etherscan.io/token/0x96313f2C374F901E3831ea6DE67b1165c4f39A54?a='+ colData + '" target="_blank">' + colData +'</a>';
  }else{
  html +=colData;
  }
