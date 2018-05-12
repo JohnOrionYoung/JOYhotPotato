@@ -42,9 +42,12 @@
 	// table data
 	  var html = '';
  
-      if(typeof(data[0]) === 'undefined') {
-        return null;
-      } else {
+      if(typeof(data[0]) === 'undefined')
+	  {
+        return false;
+      } 
+	  else
+	  {
  $.each(data, function( index, row ) {
    //bind header
  html += '<tr>';
