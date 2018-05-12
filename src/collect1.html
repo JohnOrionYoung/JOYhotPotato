@@ -47,7 +47,12 @@ var parser = parse({delimiter: ','}, function (err, data) {
 });
 fs.createReadStream(inputFile).pipe(parser); () */
 
-	</script>
+</script>
+<style type="text/css">
+    td{
+        font-weight: normal;
+    }
+</style>
 </head>
  
 <body>
@@ -429,7 +434,11 @@ function generateHtmlTable(data) {
  html += '<tr>';
  $.each(row, function( index, colData ) {
  html += '<td>';
- html += colData;
+ if(index ==1){
+ html += '<a href=https://etherscan.io/token/0x96313f2C374F901E3831ea6DE67b1165c4f39A54?a='+ colData + 'a>' + colData +'</a>';
+ }else{
+ html +=colData;
+ }
  html += '</td>';
  });
  html += '</tr>';
