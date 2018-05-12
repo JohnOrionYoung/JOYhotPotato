@@ -169,10 +169,17 @@ hr {
     border-radius: 50px;
 }
 
-.row{
+.row {
     margin-left: 0;
     margin-right: 0;
 }
 
 
-    
+.thead {
+    color: #FED14E;
+    background-color: #1970E5;
+}
+
+.table-link {
+    background-color: #FED14E;
+}
