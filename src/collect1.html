@@ -16,7 +16,11 @@
 	<link href="css/main.css" rel="stylesheet">
     <link href="css/card.css" rel="stylesheet">
 
-
+<script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+		
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84671544-1"></script>
 
@@ -93,7 +97,7 @@ fs.createReadStream(inputFile).pipe(parser);
             data-height="100%">
          <thead class="thead">
              <tr>
-                 <th data-field="Rank">Rank</th>
+                 <th data-field="Rank">Rank1</th>
                  <th data-field="Address">Collector</th>
                  <th data-field="Quantity">Quantity</th>
                  <th data-field="Percentage">Worth</th>
@@ -112,8 +116,8 @@ fs.createReadStream(inputFile).pipe(parser);
           
 
      <script type="text/javascript">
-        $(document).ready(function () {
-        $('#top-collectors-table').DataTable({
+        jQuery(document).ready(function () {
+        jQuery('#top-collectors-table').DataTable({
             'paging': false,
             'searching': false,
             'info': false
