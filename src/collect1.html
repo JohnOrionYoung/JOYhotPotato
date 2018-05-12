@@ -15,39 +15,53 @@
     <!-- Custom styles for this template -->
 	<link href="css/main.css" rel="stylesheet">
     <link href="css/card.css" rel="stylesheet">
-
-<script
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84671544-1"></script>
+    <script
 			  src="https://code.jquery.com/jquery-3.3.1.min.js"
 			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 			  crossorigin="anonymous"></script>
-		
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84671544-1"></script>
-
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <script>
-	var fs = require('fs');
-var parse = require('csv-parse');
-var async = require('async');
+    var data;
+	$.ajax({
+	  type: "GET",  
+	  url: "../python/collectors.csv",
+	  dataType: "text",       
+	  success: function(response)  
+	  {
+		data = $.csv.toArrays(response);
+		generateHtmlTable(data);
+	  }   
+	});
+	// table data
+	  var html = '';
+ 
+      if(typeof(data[0]) === 'undefined') {
+        return null;
+      } else {
+ $.each(data, function( index, row ) {
+   //bind header
+ html += '<tr>';
+ $.each(row, function( index, colData ) {
+ html += '<td>';
+ html += colData;
+ html += '</td>';
+ });
+ html += '</tr>';
+   
+ });
+ 
+ alert(html);
+ $('#collector_table').append(html);
+   }
+ } 
 
-var inputFile='../python/collectors.csv';
-
-var parser = parse({delimiter: ','}, function (err, data) {
-  async.eachSeries(data, function (line, callback) {
-    // do something with the line
-	alert("try one");
-    doSomething(line).then(function() {
-      // when processing finishes invoke the callback to move to the next one
-      callback();
-    });
-  })
-});
-fs.createReadStream(inputFile).pipe(parser);
 	</script>
 </head>
  
@@ -91,19 +105,16 @@ fs.createReadStream(inputFile).pipe(parser);
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10">
-            <table data-toggle="table"
-            data-url="../python/collectors.csv"
-            data-query-params="queryParams"
-            data-height="100%">
+            <table data-toggle="table" data-height="100%">
          <thead class="thead">
              <tr>
-                 <th data-field="Rank">Rank1</th>
+                 <th data-field="Rank">Rank</th>
                  <th data-field="Address">Collector</th>
                  <th data-field="Quantity">Quantity</th>
                  <th data-field="Percentage">Worth</th>
              </tr>
          </thead>
-         <tbody>
+         <tbody id="collector_table">
 
          </tbody>
          <div><h3>Top collector page coming soon!</h3></div>
@@ -116,8 +127,8 @@ fs.createReadStream(inputFile).pipe(parser);
           
 
      <script type="text/javascript">
-        jQuery(document).ready(function () {
-        jQuery('#top-collectors-table').DataTable({
+        $(document).ready(function () {
+        $('#top-collectors-table').DataTable({
             'paging': false,
             'searching': false,
             'info': false
