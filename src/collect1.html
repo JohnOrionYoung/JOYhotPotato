@@ -16,20 +16,19 @@
 	<link href="css/main.css" rel="stylesheet">
     <link href="css/card.css" rel="stylesheet">
 
+
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+
 			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 			  crossorigin="anonymous"></script>
-		
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84671544-1"></script>
-
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <script>
+
 	/*var fs = require('fs');
 var parse = require('csv-parse');
 var async = require('async');
@@ -47,6 +46,7 @@ var parser = parse({delimiter: ','}, function (err, data) {
   })
 });
 fs.createReadStream(inputFile).pipe(parser); () */
+
 	</script>
 </head>
  
@@ -90,18 +90,23 @@ fs.createReadStream(inputFile).pipe(parser); () */
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10">
+<<<<<<< HEAD
         <table data-toggle="table"
             data-query-params="queryParams"
             data-height="100%" id="csv-display">
          <!--<thead class="thead">
+=======
+            <table data-toggle="table" data-height="100%">
+         <thead class="thead">
+>>>>>>> 645db5d5160dcc89122de81ee7400869cae52e0e
              <tr>
-                 <th data-field="Rank">Rank1</th>
+                 <th data-field="Rank">Rank</th>
                  <th data-field="Address">Collector</th>
                  <th data-field="Quantity">Quantity</th>
                  <th data-field="Percentage">Worth</th>
              </tr>
          </thead>
-         <tbody>
+         <tbody id="collector_table">
 
          </tbody> -->
          <div><h3>Top collector page coming soon!</h3></div>
@@ -109,10 +114,7 @@ fs.createReadStream(inputFile).pipe(parser); () */
          </table>
         </div>
         <div class="col-md-1"></div>
-
         <div>
-          
-
      <script type="text/javascript">
         jQuery(document).ready(function () {
         jQuery('#top-collectors-table').DataTable({
@@ -122,6 +124,7 @@ fs.createReadStream(inputFile).pipe(parser); () */
         });
     });
     </script>
+
         </div>
 
     </div>
