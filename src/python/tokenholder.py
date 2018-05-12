@@ -20,9 +20,9 @@ def getPage(sess, page):
 def main():
     sess = requests.Session()
 
-    with open(RESULTS, 'wb') as f:
+    with open(RESULTS, 'w') as f:
         wr = csv.writer(f, quoting=csv.QUOTE_ALL)
-        wr.writerow(map(bytes, "Rank Address Quantity Percentage".split()))
+        wr.writerow(map(str, "Rank Address Quantity Percentage".split()))
         page = 0
         while True:
             page += 1
@@ -34,6 +34,7 @@ def main():
                 break
             else:
                 for row in data:
+                    print(row)
                     wr.writerow(row)
                 time.sleep(1)
 
