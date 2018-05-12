@@ -17,15 +17,45 @@
     <link href="css/card.css" rel="stylesheet">
 
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84671544-1"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
 
-
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+    <script>
+
+	/*var fs = require('fs');
+var parse = require('csv-parse');
+var async = require('async');
+
+var inputFile='../python/collectors.csv';
+
+var parser = parse({delimiter: ','}, function (err, data) {
+  async.eachSeries(data, function (line, callback) {
+    // do something with the line
+	alert("try one");
+    doSomething(line).then(function() {
+      // when processing finishes invoke the callback to move to the next one
+      callback();
+    });
+  })
+});
+fs.createReadStream(inputFile).pipe(parser); () */
+
+</script>
+<style type="text/css">
+    td{
+        font-weight: normal;
+    }
+    .bootstrap-table .table:not(.table-condensed), .bootstrap-table .table:not(.table-condensed)>tbody>tr>td, .bootstrap-table .table:not(.table-condensed)>tbody>tr>th, .bootstrap-table .table:not(.table-condensed)>tfoot>tr>td, .bootstrap-table .table:not(.table-condensed)>tfoot>tr>th, .bootstrap-table .table:not(.table-condensed)>thead>tr>td {
+    padding: 5px;
+}
+</style>
 </head>
  
 <body>
@@ -68,39 +98,26 @@
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10">
-            <table data-toggle="table"
-            data-url="/src/python/collectors.csv"
+        <table data-toggle="table"
             data-query-params="queryParams"
-            data-height="100%">
-         <thead class="thead">
-             <tr>
-                 <th data-field="Rank">Rank</th>
-                 <th data-field="Address">Collector</th>
-                 <th data-field="Quantity">Quantity</th>
-                 <th data-field="Percentage">Worth</th>
-             </tr>
-         </thead>
-         <tbody>
+            data-height="100%" id="csv-display">
 
-         </tbody>
          <div><h3>Top collector page coming soon!</h3></div>
          <div><h3>For now, <a href="https://etherscan.io/token/tokenholderchart/0x96313f2C374F901E3831ea6DE67b1165c4f39A54" target="_blank">click here</a>.</h3></div>
          </table>
         </div>
         <div class="col-md-1"></div>
-
         <div>
-          
-
      <script type="text/javascript">
-        $(document).ready(function () {
-        $('#top-collectors-table').DataTable({
-            'paging': false,
+        jQuery(document).ready(function () {
+        jQuery('#top-collectors-table').DataTable({
+            'paging': true,
             'searching': false,
             'info': false
         });
     });
     </script>
+
         </div>
 
     </div>
@@ -362,12 +379,63 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
 
 	<!-- ========= Local JavaScript ========= -->
-	<script type="text/javascript" src="js/lib/bignumber.min.js"></script>
-	<script type="text/javascript" src="js/lib/web3.min.js"></script>
-	<script type="text/javascript" src="js/lib/truffle-contract.min.js"></script>
-    <script type="text/javascript" src="js/JoyArt.js"></script>
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+<script type="text/javascript">
+var data;
+ $.ajax({
+   type: "GET",  
+   url: "python/collectors.csv",
+   dataType: "text",       
+   success: function(response)  
+   {
+     console.log(response);
+     data = $.csv.toArrays(response);
+     generateHtmlTable(data);
+   }   
+ });
 
+function generateHtmlTable(data) {
+    //var html = '<table  class="table table-condensed table-hover table-striped">';
+    var html = '';
+ 
+      if(typeof(data[0]) === 'undefined') {
+        return null;
+      } else {
+ $.each(data, function( index, row ) {
+   //bind header
+   if(index == 0) {
+ html += '<thead class="thead">';
+ html += '<tr>';
+ $.each(row, function( index, colData ) {
+ html += '<th style="padding: 8px;">';
+ html += colData;
+ html += '</th>';
+ });
+ html += '</tr>';
+ html += '</thead>';
+ html += '<tbody class="tbody" style="background-color:white;">'; 
+   }else if(index == 1){} else {
+ html += '<tr>';
+ $.each(row, function( index, colData ) {
+ html += '<td>';
+ if(index ==1){
+ html += '<a href="https://etherscan.io/token/0x96313f2C374F901E3831ea6DE67b1165c4f39A54?a='+ colData + '" target="_blank">' + colData +'</a>';
+ }else{
+ html +=colData;
+ }
+ html += '</td>';
+ });
+ html += '</tr>';
+   }
+ });
+ html += '</tbody>';
+ //html += '</table>';
+ $('#csv-display').html(html);
+   }
+ } 
+ 
+</script>
 
 </body>
 
