@@ -52,9 +52,6 @@ fs.createReadStream(inputFile).pipe(parser); () */
     td{
         font-weight: normal;
     }
-    th{
-        padding: 8px;
-    }
     .bootstrap-table .table:not(.table-condensed), .bootstrap-table .table:not(.table-condensed)>tbody>tr>td, .bootstrap-table .table:not(.table-condensed)>tbody>tr>th, .bootstrap-table .table:not(.table-condensed)>tfoot>tr>td, .bootstrap-table .table:not(.table-condensed)>tfoot>tr>th, .bootstrap-table .table:not(.table-condensed)>thead>tr>td {
     padding: 5px;
 }
@@ -411,7 +408,7 @@ function generateHtmlTable(data) {
  html += '<thead class="thead">';
  html += '<tr>';
  $.each(row, function( index, colData ) {
- html += '<th>';
+ html += '<th style="padding: 8px;">';
  html += colData;
  html += '</th>';
  });
