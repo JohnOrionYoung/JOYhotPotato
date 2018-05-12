@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import csv
 import time
 
-RESULTS = "johnorionyoung base/src/python/collectors.csv" 
+RESULTS = "collectors.csv" 
 URL = "https://etherscan.io/token/generic-tokenholders2?a=0x96313f2C374F901E3831ea6DE67b1165c4f39A54&s=0&p="
 
 def getData(sess, page):
@@ -22,7 +22,7 @@ def main():
 
     with open(RESULTS, 'wb') as f:
         wr = csv.writer(f, quoting=csv.QUOTE_ALL)
-        wr.writerow(map(str, "Rank Address Quantity Percentage".split()))
+        wr.writerow(map(bytes, "Rank Address Quantity Percentage".split()))
         page = 0
         while True:
             page += 1
