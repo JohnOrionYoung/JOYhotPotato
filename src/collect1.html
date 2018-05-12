@@ -16,8 +16,7 @@
 	<link href="css/main.css" rel="stylesheet">
     <link href="css/card.css" rel="stylesheet">
 
-<script
-			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
 			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 			  crossorigin="anonymous"></script>
 		
@@ -31,7 +30,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <script>
-	var fs = require('fs');
+	/*var fs = require('fs');
 var parse = require('csv-parse');
 var async = require('async');
 
@@ -47,7 +46,7 @@ var parser = parse({delimiter: ','}, function (err, data) {
     });
   })
 });
-fs.createReadStream(inputFile).pipe(parser);
+fs.createReadStream(inputFile).pipe(parser); () */
 	</script>
 </head>
  
@@ -91,11 +90,10 @@ fs.createReadStream(inputFile).pipe(parser);
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10">
-            <table data-toggle="table"
-            data-url="../python/collectors.csv"
+        <table data-toggle="table"
             data-query-params="queryParams"
-            data-height="100%">
-         <thead class="thead">
+            data-height="100%" id="csv-display">
+         <!--<thead class="thead">
              <tr>
                  <th data-field="Rank">Rank1</th>
                  <th data-field="Address">Collector</th>
@@ -105,7 +103,7 @@ fs.createReadStream(inputFile).pipe(parser);
          </thead>
          <tbody>
 
-         </tbody>
+         </tbody> -->
          <div><h3>Top collector page coming soon!</h3></div>
          <div><h3>For now, <a href="https://etherscan.io/token/tokenholderchart/0x96313f2C374F901E3831ea6DE67b1165c4f39A54" target="_blank">click here</a>.</h3></div>
          </table>
@@ -118,7 +116,7 @@ fs.createReadStream(inputFile).pipe(parser);
      <script type="text/javascript">
         jQuery(document).ready(function () {
         jQuery('#top-collectors-table').DataTable({
-            'paging': false,
+            'paging': true,
             'searching': false,
             'info': false
         });
@@ -390,7 +388,58 @@ fs.createReadStream(inputFile).pipe(parser);
 	<script type="text/javascript" src="js/lib/truffle-contract.min.js"></script>
     <script type="text/javascript" src="js/JoyArt.js"></script>
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+<script type="text/javascript">
+var data;
+ $.ajax({
+   type: "GET",  
+   url: "python/collectors.csv",
+   dataType: "text",       
+   success: function(response)  
+   {
+     console.log(response);
+     data = $.csv.toArrays(response);
+     generateHtmlTable(data);
+   }   
+ });
 
+function generateHtmlTable(data) {
+    //var html = '<table  class="table table-condensed table-hover table-striped">';
+    var html = '';
+ 
+      if(typeof(data[0]) === 'undefined') {
+        return null;
+      } else {
+ $.each(data, function( index, row ) {
+   //bind header
+   if(index == 0) {
+ html += '<thead class="thead">';
+ html += '<tr>';
+ $.each(row, function( index, colData ) {
+ html += '<th>';
+ html += colData;
+ html += '</th>';
+ });
+ html += '</tr>';
+ html += '</thead>';
+ html += '<tbody class="tbody" style="background-color:white;">'; 
+   }else if(index == 1){} else {
+ html += '<tr>';
+ $.each(row, function( index, colData ) {
+ html += '<td>';
+ html += colData;
+ html += '</td>';
+ });
+ html += '</tr>';
+   }
+ });
+ html += '</tbody>';
+ //html += '</table>';
+ $('#csv-display').append(html);
+   }
+ } 
+ 
+</script>
 
 </body>
 
