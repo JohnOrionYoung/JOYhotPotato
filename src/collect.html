@@ -52,7 +52,9 @@ fs.createReadStream(inputFile).pipe(parser); () */
     td{
         font-weight: 500;
     }
-    .bootstrap-table .table:not(.table-condensed), .bootstrap-table .table:not(.table-condensed)>tbody>tr>td, .bootstrap-table .table:not(.table-condensed)>tbody>tr>th, .bootstrap-table .table:not(.table-condensed)>tfoot>tr>td, .bootstrap-table .table:not(.table-condensed)>tfoot>tr>th, .bootstrap-table .table:not(.table-condensed)>thead>tr>td {
+    .bootstrap-table .table:not(.table-condensed), .bootstrap-table .table:not(.table-condensed)>tbody>tr>td,
+    .bootstrap-table .table:not(.table-condensed)>tbody>tr>th, .bootstrap-table .table:not(.table-condensed)>tfoot>tr>td,
+    .bootstrap-table .table:not(.table-condensed)>tfoot>tr>th, .bootstrap-table .table:not(.table-condensed)>thead>tr>td {
     padding: 5px;
 }
 </style>
@@ -106,21 +108,21 @@ fs.createReadStream(inputFile).pipe(parser); () */
     <div class="col-xs-12" style="height:20px;"></div>
     
     <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-10">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
         <table data-toggle="table"
             data-query-params="queryParams"
             data-height="100%" id="csv-display">
          </table>
         </div>
-        <div class="col-md-1"></div>
+        <div class="col-md-3"></div>
 
     </div>
+
+    
 
     <div>
         
- 
-    </div>
 
         <div class="col-xs-12" style="height:180px;"></div>
      
