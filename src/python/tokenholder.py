@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import csv
 import time
 
-RESULTS = "collectors.csv"
+RESULTS = "johnorionyoung base/src/python/collectors.csv"
 URL = "https://etherscan.io/token/generic-tokenholders2?a=0x96313f2C374F901E3831ea6DE67b1165c4f39A54&s=0&p="
 
 def getData(sess, page):
