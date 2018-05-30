@@ -166,3 +166,11 @@ function queryParams() {
       page: 1
   };
 }
+
+/** Add Art via values */
+  let artRow;
+  if (locallyOwned) {
+      artRow = $('#art-row-owned');
+  } else {
+      artRow = $('#art-row');
+  }
