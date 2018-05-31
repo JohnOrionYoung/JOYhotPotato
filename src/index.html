@@ -62,14 +62,57 @@
         </div>
     </nav>
     <div class="col-xs-12" style="height:60px;"></div>
+
+    <!--  <script>
+      Demo.prototype.addSorting = function () {
+  document.querySelector('.sort-options').addEventListener('change', this._handleSortChange.bind(this));
+};
+
+Demo.prototype._handleSortChange = function (evt) {
+  var value = evt.target.value;
+
+  function sortByDate(element) {
+    return element.getAttribute('data-created');
+  }
+
+  function sortByartPrice(element) {
+    return element.getAttribute('data-artPrice').toLowerCase();
+  }
+
+  var options;
+  if (value === 'date-created') {
+    options = {
+      reverse: true,
+      by: sortByDate,
+    };
+  } else if (value === 'artPrice') {
+    options = {
+      by: sortByartPrice,
+    };
+  } else {
+    options = {};
+  }
+
+  this.shuffle.sort(options);
+};
+</script>
+
+-->
     <div class="card-container">
             <div class="row mt centered">
+                  <!--  <select class="sort-options card-columns">
+                            <option value="image">Newest</option>
+                            <option value="art-text">Title</option>
+                            <option value="ownerAddress">Collector</option>
+                            <option value="artPrice">Highest Price</option>
+                            <option value="date-created">Lowest Price</option>
+                          </select>-->
             </div>
             <!-- /row -->
             <div id="card-row" class="row card-columns card-deck">
             <!-- Artworks Load Here -->
 		</div>
-		<!-- /card-row -->
+        <!-- /card-row -->
     </div>
     
 	<!-- /card-container -->
