@@ -102,8 +102,8 @@ hr {
 /* Button Colors */
 
 .btn {
-    color: #ffffff;
-    background-color: #111111;
+    color: #fafafa;
+    background-color: #252526;
     border-color: #2F80ED;
     font-size: 16px;
     font-weight: 800;
@@ -149,7 +149,7 @@ hr {
 
 .btn:disabled {
     color: #F2CF22;
-	background-color: #fafafa;
+	background-color: #ffffff;
     border-color: #F2CF22;
     opacity: 100;
     box-shadow: none;
@@ -164,8 +164,8 @@ hr {
 }
   
 .thead {
-    background-color: #111;
-    color: #fff;
+    background-color: #252526;
+    color: #ffffff;
     border-radius: 50px;
 }
 
