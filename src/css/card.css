@@ -42,6 +42,6 @@
     overflow: hidden;
     text-align: left;
     text-overflow: ellipsis;
-    line-height: 1em;
+    line-height: 1.2em;
     vertical-align: text-bottom;
 }
