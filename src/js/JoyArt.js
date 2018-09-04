@@ -12,7 +12,7 @@ function loadArt(artId, artName, artPrice, artNextPrice, ownerAddress, locallyOw
   // cardTemplate.find('.art-name').attr("href", artId + '.html');
   cardTemplate.find('.art-img').attr('src', '/img/' + artId + '.png');
   cardTemplate.find('.art-owner').text(ownerAddress);
-  cardTemplate.find('.art-owner').attr("href", "https://etherscan.io/address/" + ownerAddress);
+  cardTemplate.find('.art-owner').attr("href", "https://opensea.io/accounts/" + ownerAddress);
   cardTemplate.find('.btn-buy').attr('data-id', artId);
   cardTemplate.find('.art-price').text(parseFloat(artPrice).toFixed(3));
   cardTemplate.find('.art-next-price').text(parseFloat(artNextPrice).toFixed(3));
@@ -91,20 +91,26 @@ var App = {
     let contractInstance = App.contracts.JoyArt.at(App.JoyArtAddress);
     return contractInstance.getToken(artId).then((art) => {
       var artJson = {
-        'artId'        	: artId,
-        'artName'      	: art[0],
-        'artPrice' 			: web3.fromWei(art[1]).toNumber(),
-        'artNextPrice' 	: web3.fromWei(art[2]).toNumber(),
-        'ownerAddress'  : art[3]
+        'artId'            : artId,
+        'artName'          : art[0],
+        'artPrice'         : web3.fromWei(art[1]).toNumber(),
+        'artNextPrice'     : web3.fromWei(art[2]).toNumber(),
+        'ownerAddress'     : art[3]
       };
-      // Check to see if we own the given Art
+     
+      // Get owner username
+    $.get("https://api.opensea.io/api/v1/accounts/?address=" + art[3], function(data) {
+    var user = data.accounts[0].user
+         var ownerLabel = user ? user.username : art[3]
+      
+         // Check to see if we own the given Art
       if (artJson.ownerAddress !== localAddress) {
         loadArt(
           artJson.artId,
           artJson.artName,
           artJson.artPrice,
           artJson.artNextPrice,
-          artJson.ownerAddress,
+          ownerLabel,
           false
         );
       } else {
@@ -113,10 +119,11 @@ var App = {
           artJson.artName,
           artJson.artPrice,
           artJson.artNextPrice,
-          artJson.ownerAddress,
+          ownerLabel,
           true
         );
       }
+   })
     }).catch((err) => {
       console.log(err.message);
     })
@@ -167,11 +174,3 @@ function queryParams() {
       page: 1
   };
 }
-
-/** Add Art via values */
-  let artRow;
-  if (locallyOwned) {
-      artRow = $('#art-row-owned');
-  } else {
-      artRow = $('#art-row');
-  }

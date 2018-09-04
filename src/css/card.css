@@ -38,10 +38,10 @@
 
 .art-owner {
     display: inline-block;
-    width: 100px;
     white-space: nowrap;
     overflow: hidden;
+    text-align: left;
     text-overflow: ellipsis;
-    line-height: 1.2em;
+    line-height: 1em;
     vertical-align: text-bottom;
 }
