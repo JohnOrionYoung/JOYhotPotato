@@ -99,9 +99,9 @@ var App = {
       };
      
       // Get owner username
-    $.get("https://api.opensea.io/api/v1/accounts/?address=" + art[3], function(data) {
-    var user = data.accounts[0].user
-         var ownerLabel = user ? user.username : art[3]
+    //$.get("https://api.opensea.io/api/v1/accounts/?address=" + art[3], function(data) {
+    //var user = data.accounts[0].user
+         //var ownerLabel = user ? user.username : art[3]
       
          // Check to see if we own the given Art
       if (artJson.ownerAddress !== localAddress) {
@@ -110,7 +110,8 @@ var App = {
           artJson.artName,
           artJson.artPrice,
           artJson.artNextPrice,
-          ownerLabel,
+          artJson.ownerAddress,
+          // ownerLabel,
           false
         );
       } else {
@@ -119,14 +120,15 @@ var App = {
           artJson.artName,
           artJson.artPrice,
           artJson.artNextPrice,
-          ownerLabel,
+          artJson.ownerAddress,
+          // ownerLabel,
           true
         );
       }
    })
-    }).catch((err) => {
-      console.log(err.message);
-    })
+    // }).catch((err) => {
+     //  console.log(err.message);
+    // })
   },
 
   handlePurchase(event) {
