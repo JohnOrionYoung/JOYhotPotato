@@ -1,6 +1,9 @@
 {
   "name": "joyart",
   "version": "0.1.0",
+  "engines": {
+    "node": "10.3.0"
+  },
   "description": "Purchase original art from John Orion Young on the blockchain",
   "keywords": [
     "solidity",
