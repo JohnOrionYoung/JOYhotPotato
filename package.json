@@ -36,7 +36,6 @@
     "etherscan-api": "^9.0.0",
     "express": "4.16.4",
     "jsonfile": "^5.0.0",
-    "web": "6.0.0",
     "web3": "6.0.0",
     "zeppelin-solidity": "^1.12.0"
   },
