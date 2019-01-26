@@ -9,8 +9,9 @@ function loadArt(artId, artName, artPrice, artNextPrice, ownerAddress, locallyOw
   }
 
   cardTemplate.find('.art-name').text(artName);
-  // cardTemplate.find('.art-name').attr("href", artId + '.html');
+  cardTemplate.find('.art-name').attr("href", artId + '.html');
   cardTemplate.find('.art-img').attr('src', '/img/' + artId + '.png');
+  cardTemplate.find('.art-img').attr("href", artId + '.html');
   cardTemplate.find('.art-owner').text(ownerAddress);
   cardTemplate.find('.art-owner').attr("href", "https://opensea.io/accounts/" + ownerAddress);
   cardTemplate.find('.btn-buy').attr('data-id', artId);
@@ -43,7 +44,9 @@ var App = {
       web3 = new Web3(web3Provider);
     } else {    
       console.error('No web3 provider found. Please install Metamask on your browser.');
-      alert('💎 Web3 Ethereum wallet needed to collect art.\n\n🦊 Metamask for desktop or Trust for mobile recomended.\n\n😃 Please see FAQ.');
+     // swal("You can't see the art 🙈", "💎 Web3 access needed to see and collect art.\n\n🦊 Metamask for desktop or Trust for mobile recomended.\n\n😃 Check the FAQ.");
+      var hiddenBox = $( "#web3note" );
+      hiddenBox.show();
     }
     return App.initContract();
   },
@@ -98,12 +101,12 @@ var App = {
         'ownerAddress'     : art[3]
       };
      
-      // Get owner username
-    //$.get("https://api.opensea.io/api/v1/accounts/?address=" + art[3], function(data) {
-    //var user = data.accounts[0].user
-         //var ownerLabel = user ? user.username : art[3]
+       //Get owner username
+    // $.get("https://api.opensea.io/api/v1/accounts/?address=" + art[3], function(data) {
+    // var user = data.accounts[0].user
+         // var ownerLabel = user ? user.username : art[3]
       
-         // Check to see if we own the given Art
+         //Check to see if we own the given Art
       if (artJson.ownerAddress !== localAddress) {
         loadArt(
           artJson.artId,
@@ -126,9 +129,9 @@ var App = {
         );
       }
    })
-    // }).catch((err) => {
-     //  console.log(err.message);
-    // })
+     //}).catch((err) => {
+     // console.log(err.message);
+    //})
   },
 
   handlePurchase(event) {
@@ -167,12 +170,37 @@ jQuery(document).ready(
   }
 );
 
-function queryParams() {
-  return {
-      type: 'owner',
-      sort: 'updated',
-      direction: 'desc',
-      per_page: 100,
-      page: 1
-  };
-}
+
+//Video Button
+
+var videoPlayButton,
+	videoWrapper = document.getElementsByClassName('video-wrapper')[0],
+    video = document.getElementsByTagName('video')[0],
+    videoMethods = {
+        renderVideoPlayButton: function() {
+            if (videoWrapper.contains(video)) {
+				this.formatVideoPlayButton()
+                video.classList.add('has-media-controls-hidden')
+                videoPlayButton = document.getElementsByClassName('video-overlay-play-button')[0]
+                videoPlayButton.addEventListener('click', this.hideVideoPlayButton)
+            }
+        },
+
+        formatVideoPlayButton: function() {
+            videoWrapper.insertAdjacentHTML('beforeend', '\
+                <svg class="video-overlay-play-button" viewBox="0 0 200 200" alt="Play video">\
+                    <circle cx="100" cy="100" r="90" fill="none" stroke-width="16" stroke="#FFE70D"/>\
+                    <polygon points="70, 55 70, 145 145, 100" fill="#FFE70D"/>\
+                </svg>\
+            ')
+        },
+
+        hideVideoPlayButton: function() {
+            video.play()
+            videoPlayButton.classList.add('is-hidden')
+            video.classList.remove('has-media-controls-hidden')
+            video.setAttribute('controls', 'controls')
+        }
+	}
+
+videoMethods.renderVideoPlayButton()

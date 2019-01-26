@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" href="img/favicon.ico">
+
+    <title>JOY</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:700,900" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+	<link href="css/main.css" rel="stylesheet">
+    <link href="css/card.css" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84671544-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-84671544-1');
+    </script>
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+
+<!-- nav script -->
+<script>
+    function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+    z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+
+</head>
+
+<body>
+
+<div w3-include-html="nav.html"></div> 
+
+<div class="col-xs-12" style="height:100px;"></div>
+
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11"><img src="/img/JOYWebHero.png" class="img-fluid" width="100%" alt="John Orion Young writing his name in clay"></div>
+    </div>
+
+<div class="col-xs-12" style="height:20px;"></div>
+
+   <div class="row yellowcircle round vertical-center">
+        <div class="col-md-2"></div>
+        <div class="col-md-4"><img src="/img/joyjoy.png" class="img-fluid rotate" width="90%" alt="John Orion Young's face in two realities'"></div>
+        <div class="col-md-6"> <h1 class="text-justify">JOY</h1>
+        <h2 class="text-justify">JOY is art </h2>
+        <h2 class="text-justify">JOY is love </h2>
+        <h2 class="text-justify">JOY is creativity </h2>
+        <h2 class="text-justify">JOY is a state of being </h2>
+        <h2 class="text-justify">JOY is freedom to connect  </h2>
+        <h2 class="text-justify">JOY is the sound in your head </h2>
+        <h2 class="text-justify">JOY is our world to live and make</h2>
+ <!--       <h2 class="text-justify">JOY is the development of consciousness </h2> -->
+ <!--       <h2 class="text-justify">JOY is the magic of art and technology </h2> -->
+        <h2 class="text-justify">JOY is the artist John Orion Young </h2></div>
+    </div>
+
+
+  <div class="row vertical-center">
+        <div class="col-md-1"></div>
+        <div class="col-lg-5"><h1>Collect JOYs</h1>
+        <h2 class="text-center">Made in Virtual Reality. Sold on the Blockchain.</h2>
+        <div class="col-xs-12" style="height:20px;"></div>
+            <div class="button text-center">
+            <a class="btn btn-primary grow" href="/index.html" role="button">Collect JOYs</a>
+    </div></div>
+        <div class="col-lg-5"><video width="100%" autoplay=1 loop=1>
+    <source src="/video/hero.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video></div>
+        <div class="col-md-1"></div>
+    </div>
+
+
+    
+    <div class="container-fluid">
+   
+<div class="col-xs-12" style="height:80px;"></div>
+
+</div>
+<div class="col-xs-12" style="height:70px;"></div>
+
+ 
+ <!-- footer-->
+    <div w3-include-html="nav2.html"></div> 
+
+    <!-- ========= Bootsrap 4 - JavaScript ========= -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" 
+    integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+    crossorigin="anonymous"></script>
+
+	<!-- ========= Local JavaScript ========= -->
+	<script type="text/javascript" src="js/JoyArt.js"></script>
+    <script>includeHTML();</script>
+
+</body>
+</html>
