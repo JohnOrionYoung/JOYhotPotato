@@ -11,7 +11,7 @@
   ],
   "engines": {
     "node": "10.3.0"
-  }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/johnorionyoung/johnorionyoung.github.io"
