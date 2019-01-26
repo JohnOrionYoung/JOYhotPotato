@@ -1,7 +1,6 @@
 {
   "name": "joyart",
   "version": "0.1.0",
-    "node": "10.3.0",
   "description": "Purchase original art from John Orion Young on the blockchain",
   "keywords": [
     "solidity",
@@ -10,6 +9,9 @@
     "contracts",
     "JoyArt"
   ],
+  "engines": {
+    "node": "10.3.0"
+  }
   "repository": {
     "type": "git",
     "url": "git+https://github.com/johnorionyoung/johnorionyoung.github.io"
