@@ -1,5 +1,5 @@
 body {
-	background-color: #fafafa;
+	background-color: #ffffff;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 600;
 	font-size: 16px;
@@ -9,7 +9,7 @@ body {
 }
 h1 {
 	font-size: 50px;
-	font-family: 'Futura', 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 900;
 	text-align: center;
 }
@@ -71,10 +71,11 @@ hr {
 	margin: .5em 0;
 	padding: 0;
 }
+
 .navbar {
-	font-size: 24px;
-	font-family: 'Montserrat', 'Roboto', sans-serif;
-	font-weight: 900;
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
 }
 
 .nav-link {
@@ -85,7 +86,6 @@ hr {
 .nav-link:hover {
 	margin-left: 10px;
 	margin-right: 20px;
-	background: yellow;
 	color: #111;
 	opacity: 100;
 	border-radius: 20px;
@@ -122,7 +122,7 @@ hr {
 
 /* Button Colors */
 .btn {
-	color: #fafafa;
+	color: #ffffff;
 	background-color: #252526;
 	border-color: #2F80ED;
 	font-size: 16px;
@@ -135,12 +135,12 @@ hr {
 }
 .btn:hover {
 	color: #ffffff;
-	background-color: #2F80ED;
+	background-color: #0056FF;
 	border-color: #1970E5;
 	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16), 0 1px 4px rgba(0, 0, 0, 0.19);
 }
 .btn-link {
-	color: #1970E5;
+	color: #0056FF;
 	background: none;
 	font-size: 16px;
 	font-weight: 700;
@@ -202,35 +202,7 @@ hr {
 .table {
 	color: #D7342D;
 }
-/* home row */
-.blue {
-	background: #F2CC02;
-}
-.yellow {
-	background: #FFE70D;
-	background-image:radial-gradient(#F5DD02 20%, transparent 0),radial-gradient(#F5DD02 20%, transparent 0);
-	background-size: 120px 120px;
-	background-position: 0 0, 60px 60px;
-	background-attachment: fixed;
-}
-.yellowcircle {
-	background: repeating-radial-gradient(circle,yellow,yellow 15px,#F5DD02 40px,#F5DD02 80px);
-	background-attachment: fixed;
-}
-.red {
-	background: #F2CC02;
-}
-.round {
-	border-radius: 70%/250px 250px;
-}
-.wavybg {
-	background-image: url("/img/JOYfulheader.png");
-	height: 100vh;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
+
 .vertical-center {
 	min-height: 100%;
 	/* Fallback for browsers do NOT support vh unit */
@@ -298,7 +270,6 @@ body {
 .grad {
   background-image: linear-gradient(black, purple, red, purple, black);
 }
-
 
 
 .video-wrapper {
