@@ -42,7 +42,6 @@ h7 {
 	margin-Top: 12px;
 	margin-bottom: 20px;
 }
-
 .title {
 	font-size: 12vmin;
     min-font-size: 50px;
@@ -50,7 +49,6 @@ h7 {
 .left {
 	text-align: Left;
 }
-
 a:focus {
 	color: #111;
 	text-decoration: none;
@@ -104,13 +102,9 @@ hr {
 	font-size: 30px;
 	font-weight: 600;
 }
-
-
 .navbarText {
 	
 }
-
-
 .dropdown-menu {
 	border: none;
 	background-color: #fff;
@@ -125,8 +119,6 @@ hr {
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#2F80ED' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
-
-
 /* Button Colors */
 .btn {
 	color: #ffffff;
