@@ -21,6 +21,7 @@ function loadArt(artId, artName, artPrice, artNextPrice, ownerAddress, locallyOw
   cardRow.append(cardTemplate.html());
 }
 
+
 var App = {
   contracts: {},
   JoyArtAddress: '0x96313f2C374F901E3831ea6DE67b1165c4f39A54',
@@ -32,7 +33,7 @@ var App = {
       // show some dialog to ask the user to start a node
   
    } else {
-      
+
       // start web3 filters, calls, etc
   
    }
@@ -44,7 +45,6 @@ var App = {
       web3 = new Web3(web3Provider);
     } else {    
       console.error('No web3 provider found. Please install Metamask on your browser.');
-     // swal("You can't see the art 🙈", "💎 Web3 access needed to see and collect art.\n\n🦊 Metamask for desktop or Trust for mobile recomended.\n\n😃 Check the FAQ.");
       var hiddenBox = $( "#web3note" );
       hiddenBox.show();
     }
