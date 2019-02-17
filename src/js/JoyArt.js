@@ -9,7 +9,7 @@ function loadArt(artId, artName, artPrice, artNextPrice, ownerAddress, locallyOw
   }
 
   cardTemplate.find('.art-name').text(artName);
-  cardTemplate.find('.art-name').attr("href", artId + '.html');
+  // cardTemplate.find('.art-name').attr("href", artId + '.html');
   cardTemplate.find('.art-img').attr('src', '/img/' + artId + '.png');
   cardTemplate.find('.art-img').attr("href", artId + '.html');
   cardTemplate.find('.art-owner').text(ownerAddress);
