@@ -56,7 +56,7 @@
           elmnt.removeAttribute("w3-include-html");
           includeHTML();
         }
-      }      
+      }
       xhttp.open("GET", file, true);
       xhttp.send();
       /*exit the function:*/
@@ -69,7 +69,7 @@
 
 <body>
 
-<div w3-include-html="nav.html"></div> 
+<div w3-include-html="nav.html"></div>
 
 <div class="col-xs-12" style="height:40px;"></div>
 
@@ -108,12 +108,12 @@
 		</div>
         <!-- /card-row -->
     </div>
-    
+
 	<!-- /card-container -->
     <div id="card-template" style="display: none;">
         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
             <div class="card shadow">
-                <!-- Art Image --> 
+                <!-- Art Image -->
                 <hr>
                 <a class="image">
                     <img class="card-img-top art-img" style="width:100%;"></img>
@@ -128,7 +128,7 @@
                         <h7><a class="text" style="color: #555;">Collector:</a></h7>
                         <h7><a class="art-owner" style="color: #555;" target="_blank"></a></h7>
                     </div>
-                  
+
                     <hr>
                     <!-- Art Purchase -->
                     <form class="art-purchase">
@@ -154,23 +154,24 @@
 	</div>
 	<!-- /card-template -->
     <div class="col-xs-12" style="height:180px;"></div>
-  
+
     <!-- footer-->
-    <div w3-include-html="nav2.html"></div> 
+    <div w3-include-html="nav2.html"></div>
 
     <!-- ========= Bootsrap 4 - JavaScript ========= -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 		crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
 	crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
 	<!-- ========= Local JavaScript ========= -->
 	<script type="text/javascript" src="js/lib/bignumber.min.js"></script>
 	<script type="text/javascript" src="js/lib/web3.min.js"></script>
 	<script type="text/javascript" src="js/lib/truffle-contract.min.js"></script>
-	<script type="text/javascript" src="js/JoyArt.js"></script>
+    <script type="text/javascript" src="js/JoyArt.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@portis/web3/umd/index.min.js"></script>
     <script>includeHTML();</script>
 
 </body>

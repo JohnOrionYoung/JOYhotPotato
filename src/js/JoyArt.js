@@ -31,11 +31,11 @@ var App = {
     if(!web3.isConnected()) {
 
       // show some dialog to ask the user to start a node
-  
+
    } else {
 
       // start web3 filters, calls, etc
-  
+
    }
   },
 
@@ -43,10 +43,10 @@ var App = {
     if (typeof web3 !== 'undefined' && typeof web3.currentProvider !== 'undefined') {
       web3Provider = web3.currentProvider;
       web3 = new Web3(web3Provider);
-    } else {    
-      console.error('No web3 provider found. Please install Metamask on your browser.');
-      var hiddenBox = $( "#web3note" );
-      hiddenBox.show();
+    } else {
+      const portis = new Portis('211b48db-e8cc-4b68-82ad-bf781727ea9e', 'mainnet');
+      web3Provider = portis.provider;
+      web3 = new Web3(web3Provider);
     }
     return App.initContract();
   },
@@ -75,18 +75,18 @@ var App = {
       } else {
         // Remove existing cards
         $('#card-row').children().remove();
-      }
-    });
 
-    // Get local address so we don't display our owned items
-    var address = web3.eth.defaultAccount;
-    let contractInstance = App.contracts.JoyArt.at(App.JoyArtAddress);
-    return totalSupply = contractInstance.totalSupply().then((supply) => {
-      for (var i = 0; i < supply; i++) {
-        App.getArtDetails(i, address);
+        // Get local address so we don't display our owned items
+        var address = accounts[0];
+        let contractInstance = App.contracts.JoyArt.at(App.JoyArtAddress);
+        return totalSupply = contractInstance.totalSupply().then((supply) => {
+          for (var i = 0; i < supply; i++) {
+            App.getArtDetails(i, address);
+          }
+        }).catch((err) => {
+          console.log(err.message);
+        });
       }
-    }).catch((err) => {
-      console.log(err.message);
     });
   },
 
@@ -100,12 +100,12 @@ var App = {
         'artNextPrice'     : web3.fromWei(art[2]).toNumber(),
         'ownerAddress'     : art[3]
       };
-     
+
        //Get owner username
     // $.get("https://api.opensea.io/api/v1/accounts/?address=" + art[3], function(data) {
     // var user = data.accounts[0].user
          // var ownerLabel = user ? user.username : art[3]
-      
+
          //Check to see if we own the given Art
       if (artJson.ownerAddress !== localAddress) {
         loadArt(
