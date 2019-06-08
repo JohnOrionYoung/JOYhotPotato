@@ -2,13 +2,13 @@ body {
 	background-color: #ffffff;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 600;
-	font-size: 16px;
+	font-size: 14px;
 	color: #111;
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;
 }
 h1 {
-	font-size: 68px;
+	font-size: 34px;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 900;
 	text-align: center;
@@ -44,7 +44,6 @@ h7 {
 }
 .title {
 	font-size: 12vmin;
-    min-font-size: 50px;
 }
 .left {
 	text-align: Left;
@@ -102,8 +101,7 @@ hr {
 	font-size: 30px;
 	font-weight: 600;
 }
-.navbar-market {
-}
+
 
 .dropdown-menu {
 	border: none;
@@ -112,13 +110,6 @@ hr {
 	box-shadow: 0px -5px 26px rgba(0, 0, 0, 0.05), 0 0px 11px rgba(0, 0, 0, 0.12);
 }
 
-.custom-toggler.navbar-toggler {
-    border-color: #F2CC02;
-}
-
-.custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#2F80ED' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
 /* Button Colors */
 .btn {
 	color: #ffffff;
