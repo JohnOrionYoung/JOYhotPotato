@@ -73,7 +73,7 @@ hr {
 .navbar {
 	font-size: 14px;
 	font-family: 'Roboto', sans-serif;
-	font-weight: 600;
+	font-weight: 800;
 	max-width: 780pt;
 	margin: 0 auto;
 }
@@ -94,6 +94,7 @@ hr {
 	margin-right: 20px;
 	color: #111;
 	opacity: 100;
+	text-decoration: none;
 }
 .navbar-brand {
 	margin-left: 9px;
@@ -101,7 +102,6 @@ hr {
 	font-size: 30px;
 	font-weight: 600;
 }
-
 
 .dropdown-menu {
 	border: none;
@@ -201,9 +201,6 @@ hr {
 	display: flex;
 	align-items: center;
 }
-.grow {
-	transition: all .2s ease-in-out;
-}
 .grow:hover {
 	transform: scale(1.1);
 }
@@ -255,7 +252,6 @@ body {
 .jwHeader {
 	z-index: 1;
 }
-
 
 .grad {
   background-image: linear-gradient(black, purple, red, purple, black);
