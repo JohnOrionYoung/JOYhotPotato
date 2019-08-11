@@ -12,6 +12,7 @@ h1 {
 	font-family: cooper-black-std, serif;
 	font-weight: 400;
 	text-align: center;
+	letter-spacing: 1px;
 }
 h2 {
 	font-size: 24px;
