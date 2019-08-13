@@ -117,15 +117,20 @@ hr {
 	top:28px;
 }
 
-.navbar-toggler-icon { 
-	color: #0056FF;
-}
+.navbar-light .navbar-toggler {
+	border-color:#fff;
+  }
+
+  .navbar-light .navbar-toggler-icon {
+
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,86,255, 1)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 2h24M4 12h24M4 22h24'/%3E%3C/svg%3E");
+  
+  }
 
 .navbar-brand {
-	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 22%;
+	width: 100px;
 }
 
 /* Button Colors */
