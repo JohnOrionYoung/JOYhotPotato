@@ -101,12 +101,12 @@ var App = {
         'ownerAddress'     : art[3]
       };
      
-       //Get owner username
-    // $.get("https://api.opensea.io/api/v1/accounts/?address=" + art[3], function(data) {
-    // var user = data.accounts[0].user
-         // var ownerLabel = user ? user.username : art[3]
-      
-         //Check to see if we own the given Art
+      //Get owner username
+      // $.get("https://api.opensea.io/api/v1/accounts/?address=" + art[3], function(data) {
+      // var user = data.accounts[0].user
+      // var ownerLabel = user ? user.username : art[3]
+
+      //Check to see if we own the given Art
       if (artJson.ownerAddress !== localAddress) {
         loadArt(
           artJson.artId,

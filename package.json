@@ -34,6 +34,8 @@
   "dependencies": {
     "3": "^2.1.0",
     "@portis/web3": "^2.0.0-beta.16",
+    "@walletconnect/browser": "^1.0.0-beta.32",
+    "@walletconnect/qrcode-modal": "^1.0.0-beta.32",
     "api": "^1.0.0",
     "bitski-node": "^0.3.0",
     "etherscan": "^0.2.2",
